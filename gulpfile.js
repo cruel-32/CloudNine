@@ -14,15 +14,11 @@ const gutil = require('gulp-util'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
     template = require('gulp-template'),
-    filemapGenerator = require('gulp-filemap-generator'),
     browsersync = require("browser-sync").create(),
     del = require('del'),
-    zip = require('gulp-zip')
-    cached = require('gulp-cached'),
-    remember = require('gulp-remember'),
+    zip = require('gulp-zip'),
     origin = "source",
-    project = "build",
-    docs = "docs";
+    project = "build";
 
 const clean = async (done) => {
     await del([`${project}`]);
@@ -43,41 +39,24 @@ const html = ()=> src([`${origin}/**/*.html`, `!${origin}/include/*.html`, `!${o
     .pipe(dest(`${project}`))
     .pipe(browsersync.stream());
 
-const generateFilemap = () => src([`${project}/**/*.html`], {since: lastRun(html)})
-    .pipe(filemapGenerator({
-        'template':`map.html`,
-        'templatePath':`${origin}`,
-        'title':'-',
-        'author':'cruel32',
-        'description':'설명이 없어요',
-        'stream' : false,
-        'baseDir' : `${project}`,
-        'listName' : 'maps',
-        'hrefBaseDir' : ``,
-        'toJson' : false,
-        "jsonName" : "maps",
-        "jsonDest" : `${project}`
-    }))
-    .pipe(dest(`${project}`))
 
-
-const scripts = ()=> src(`${origin}/js/**/*.js`, {since: lastRun(scripts)})
+const scripts = ()=> src([`${origin}/js/**/*.js`], {since: lastRun(scripts)})
     .pipe(newer(`${project}/js/**/*.js`))
     .pipe(plumber({errorHandler : gutil.log}))
-    .pipe(jshint())
     .pipe(babel({
         presets: ['@babel/env']
     }))
+    .pipe(jshint())
     .pipe(uglify())
     .pipe(dest(`${project}/js`))
     .pipe(browsersync.stream());
 
 
-const css = () => src([`${origin}/css/**/*.{scss,sass}`,`!${origin}/css/import/**/*.{scss,sass}`], {since: lastRun(css)})
+const css = () => src([`${origin}/css/**/*.{scss,sass}`, `!${origin}/css/import/**/*.{scss,sass}`], {since: lastRun(css)})
     .pipe(newer(`${project}/css/**/*.{scss,sass}`))
     .pipe(sass.sync().on('error', sass.logError))
     // .pipe(sass().on('error', sass.logError))
-    .pipe(src([`${origin}/css/**/*.css`,`!${origin}/css/_icons.css`]), {passthrough: true})
+    // .pipe(src([`${origin}/css/**/*.css`,`!${origin}/css/_icons.css`]), {passthrough: true})
     .pipe(autoprefixer())
     .pipe(gcmq())
     .pipe(csscomb({
@@ -105,7 +84,7 @@ const imagesOptimization = () => src([
 
 const browserSyncInit = (done)=>{
     browsersync.init({
-        index:'map.html',
+        index:'index.html',
         server: {
             baseDir: `${project}/`,
         },
@@ -125,14 +104,13 @@ const packing = () =>
 
 
 const watcher = () => {
-    watch([`${origin}/html/**/*.html`, `${origin}/json/**/*.json`], html).on('change', browsersync.reload);
+    watch([`${origin}/**/*.html`, `${origin}/json/**/*.json`], html).on('change', browsersync.reload);
     watch([`${origin}/css/**/*.{scss,sass.css}`], css).on('change', browsersync.reload);
     watch([`${origin}/js/**/*.js`], scripts).on('change', browsersync.reload);
     watch([`${origin}/images/**/*.{gif,jpeg,jpg,png,svg}`], images).on('change', browsersync.reload);
 }
 
-exports.default = series(clean, parallel(html, css, scripts, images), generateFilemap, parallel(browserSyncInit, watcher) );
-exports.filemap = generateFilemap;
+exports.default = series(clean, parallel(html, css, scripts, images), parallel(browserSyncInit, watcher) );
 exports.clean = clean;
 exports.optimize = imagesOptimization;
 exports.pack = series(clean, parallel(html, css, scripts, images), packing);

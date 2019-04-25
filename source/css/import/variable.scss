@@ -1,0 +1,28 @@
+//breakPoint
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1140px,
+  xl: 1440px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1140px,
+  xl: 1440px
+) !default;
+
+$grid-breakpoints-colums-5: (
+  xs: 0,
+  sm: 576px,
+  xl: 1440px
+) !default;
+
+
+//color;
+$primary:red;
+$text:#555;
+$textBold:#333;
+
