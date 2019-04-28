@@ -1,0 +1,72 @@
+@import '../import/variable.scss';
+@import '../../../node_modules/bootstrap/scss/mixins/breakpoints';
+
+.navigation {
+  .row {
+    position: relative;
+    margin:0;
+    height:4rem;
+    @include media-breakpoint-up(md){
+      height:7.5rem;
+    }
+    .logo-section {
+      .logo {
+        display:inline-block;
+        height:100%;
+        background: url(/images/character.png) center 1.25rem no-repeat;
+        background-size:cover;
+        height:0;
+        width:11.7rem;
+        padding-top:7.5rem;
+        overflow: hidden;
+      }
+    }
+    .title {
+      width:100%;
+      height:100%;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      font-size:2.5rem;
+      .text {
+        strong {
+          color:$red;
+        }
+      }
+    }
+    .search-form {
+      display:flex;
+      width:100%;
+      height:100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      outline: none;
+      .form-control {
+        border:none;
+        border-radius: 0;
+        border-bottom: 1px solid #ced4da;
+        outline: none;
+        width:180px;
+        @include media-breakpoint-down(md){
+          width:120px;
+        }
+      }
+      .fa-search {
+        color:#a9bafa;
+        font-size:2rem;
+      }
+    }
+    .fa-user {
+      color:#fbc1d5;
+      font-size:2rem;
+    }
+    .menu-button {
+      position:absolute;
+      right:0rem;
+      top:50%;
+      margin-top:-1.5rem;
+      font-size:2.5rem;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+ //custom scss
+@import '../import/variable.scss';
+@import '../../../node_modules/bootstrap/scss/mixins/breakpoints';
+// bootstrap scss
+
+// bootstrap mixin 사용법
+// @import '../../node_modules/bootstrap/scss/mixins/breakpoints'; //같이 import한 후에
+// @include media-breakpoint-only(xs) { 스타일링 }
+// @include media-breakpoint-only(sm) { 스타일링 }
+// @include media-breakpoint-only(md) { 스타일링 }
+// @include media-breakpoint-only(lg) { 스타일링 }
+// @include media-breakpoint-only(xl) { 스타일링 }
+
+// bootstrap scss z-index 변수
+// $zindex-dropdown:          1000 !default;
+// $zindex-sticky:            1020 !default;
+// $zindex-fixed:             1030 !default;
+// $zindex-modal-backdrop:    1040 !default;
+// $zindex-modal:             1050 !default;
+// $zindex-popover:           1060 !default;
+// $zindex-tooltip:           1070 !default;
+
+nav {
+  padding:0;
+  background:#fff;
+}

@@ -10,24 +10,34 @@
 </head>
 <body>
 <div class="wrap">
-  @@include('component/navigation/navigation.html')
-  
+  @@include('component/header/header.html')
     <!-- Page Content -->
     <div class="container-fluid p-0">
-      <div class="container-fluid" >
-        <img src="/images/channels4_banner.jpg" style="width:100%;"/>
-      </div>
       <div class="container">
-        <h1 class="my-4">Welcome to Modern Business</h1>
+        <div class="row main-display">
+          <div class="col-md-8">
+            <div class="display-large">
+              <h3 class="music-title">
+                <i class="fas fa-music"></i>
+                <span>상팔의 추천곡 (Sangpal’s Choice)</span>
+              </h3>
+              <div>
+                <img src="/images/thum-large.png" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ml-md-3">
+              리스트
+            </div>
+          </div>
+        </div> 
+
         <!-- Marketing Icons Section -->
         <div class="row">
-          @@include('component/musicIDisplaytem/musicIDisplaytem.html')
-          @@include('component/musicIDisplaytem/musicIDisplaytem.html')
-          @@include('component/musicIDisplaytem/musicIDisplaytem.html')
-          @@include('component/musicIDisplaytem/musicIDisplaytem.html')
-          @@include('component/musicIDisplaytem/musicIDisplaytem.html')
-          @@include('component/musicIDisplaytem/musicIDisplaytem.html')
-          @@include('component/musicIDisplaytem/musicIDisplaytem.html')
+          @@for (var i = 0; i < 6; i++) {
+            @@include('component/musicIDisplaytem/musicIDisplaytem.html')
+          }
         </div>
         <!-- /.row -->
     
@@ -35,14 +45,9 @@
         <h2>Portfolio Heading</h2>
     
         <div class="row">
-          @@include('component/musicalNoteItem/musicalNoteItem.html')
-          @@include('component/musicalNoteItem/musicalNoteItem.html')
-          @@include('component/musicalNoteItem/musicalNoteItem.html')
-          @@include('component/musicalNoteItem/musicalNoteItem.html')
-          @@include('component/musicalNoteItem/musicalNoteItem.html')
-          @@include('component/musicalNoteItem/musicalNoteItem.html')
-          @@include('component/musicalNoteItem/musicalNoteItem.html')
-          @@include('component/musicalNoteItem/musicalNoteItem.html')
+          @@for (var i = 0; i < 6; i++) {
+            @@include('component/musicalNoteItem/musicalNoteItem.html')
+          }
         </div>
         <!-- /.row -->
     

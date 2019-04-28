@@ -15,14 +15,17 @@ $container-max-widths: (
 ) !default;
 
 $grid-breakpoints-colums-5: (
-  xs: 0,
-  sm: 576px,
-  xl: 1280px
+  cxs: 0,
+  csm: 576px,
+  cxl: 1280px
 ) !default;
 
 
 //color;
 $primary:red;
-$text:#555;
+$red:#ee5555;
+$title:#333;
+$text:#666;
+$text-hover:#000;
 $textBold:#333;
 

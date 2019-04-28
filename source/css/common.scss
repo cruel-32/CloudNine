@@ -24,8 +24,20 @@
 // $zindex-popover:           1060 !default;
 // $zindex-tooltip:           1070 !default;
 
+@font-face { font-family: 'BMDOHYEON';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, table, div, p {font-family:'BMDOHYEON';}
+html, body {
+  @include media-breakpoint-down(md) {
+    font-size:12px;
+  }
+}
 body {
-  padding-top: 56px;
+  padding-top: 11.5rem;
   @include make-grid-columns(5, 10px, $grid-breakpoints-colums-5)
 }
 
@@ -40,3 +52,28 @@ body {
 }
 
 
+button {
+  background:transparent;
+  border:none;
+  padding:0;
+}
+
+strong {font-style: none; font-weight: normal;}
+
+
+img {
+  width:100%;
+}
+
+.music-title {
+  margin:1.5rem 0 1rem 0;
+  font-size:1.5rem;
+  color:$title;
+  .fa-music {
+    font-size:1.2rem;
+    color:#dea4ed;
+  }
+  span {
+    font-size:1.5rem;
+  }
+}

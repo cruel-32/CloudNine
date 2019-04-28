@@ -1,0 +1,24 @@
+@import '../import/variable.scss';
+@import '../../../node_modules/bootstrap/scss/mixins/breakpoints';
+
+.tags {
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  padding: 1rem 0;
+  .title {
+    margin-bottom:0;
+    font-size:1.2rem;
+    margin-right:1rem;
+    margin-bottom:0.2rem;
+  }
+  .tag-list {
+    .tag-item {
+      color:$text;
+      margin-right:0.5rem;
+      text-decoration: none;
+      &:hover {
+        color:$text-hover;
+      }
+    }
+  }
+}

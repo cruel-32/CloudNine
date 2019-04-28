@@ -74,6 +74,9 @@ const images = () => src([
     .pipe(newer(`${project}/images/**/*.{gif,jpeg,jpg,png,svg}`))
     .pipe(dest(`${project}/images`))
 
+    
+const font = ()=> src([`${origin}/font/**/*.{woff,eot,otf}`]).pipe(dest(`${project}/font`));
+
 //dest 폴더에 생성된 이미지를 한번더 압축
 const imagesOptimization = () => src([
         `${project}/images/**/*.{gif,jpeg,jpg,png,svg}`,
@@ -104,15 +107,15 @@ const packing = () =>
 
 
 const watcher = () => {
-    watch([`${origin}/**/*.html`, `${origin}/json/**/*.json`], html).on('change', browsersync.reload);
+    watch([`${origin}/**/*.html`], html).on('change', browsersync.reload);
     watch([`${origin}/css/**/*.{scss,sass.css}`], css).on('change', browsersync.reload);
     watch([`${origin}/js/**/*.js`], scripts).on('change', browsersync.reload);
     watch([`${origin}/images/**/*.{gif,jpeg,jpg,png,svg}`], images).on('change', browsersync.reload);
 }
 
-exports.default = series(clean, parallel(html, css, scripts, images), parallel(browserSyncInit, watcher) );
+exports.default = series(clean, parallel(font, html, css, scripts, images), parallel(browserSyncInit, watcher) );
 exports.clean = clean;
 exports.optimize = imagesOptimization;
-exports.pack = series(clean, parallel(html, css, scripts, images), packing);
+exports.pack = series(clean, parallel(font,html, css, scripts, images), packing);
 
 
