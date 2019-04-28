@@ -14,7 +14,7 @@ $container-max-widths: (
   xl: 1280px
 ) !default;
 
-$grid-breakpoints-colums-5: (
+$grid-breakpoints-colums-custom-5: (
   cxs: 0,
   csm: 576px,
   cxl: 1280px
@@ -29,3 +29,4 @@ $text:#666;
 $text-hover:#000;
 $textBold:#333;
 
+$grid-gutter-width-custom:16px !default;

@@ -15,84 +15,108 @@
     <div class="container-fluid p-0">
       <div class="container">
         <div class="row main-display">
-          <div class="col-md-8">
+          <div class="col-lg-8">
             <div class="display-large">
               <h3 class="music-title">
                 <i class="fas fa-music"></i>
                 <span>상팔의 추천곡 (Sangpal’s Choice)</span>
               </h3>
-              <div>
+              <div class="media-section">
                 <img src="/images/thum-large.png" />
+              </div>
+              <div class="d-block tag-list pt-3 pb-3">
+                  <a class="tag-item" href="#">#자전거탄풍경1집</a>
+                  <a class="tag-item" href="#">#16비트</a>
+                  <a class="tag-item" href="#">#클래식OST</a>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="ml-md-3">
-              리스트
+          <div class="col-lg-4">
+            <div class="music-tab">
+              <div class="row tab-btn-section">
+                <div class="col-md-4 col-sm-3 col-xs-4">
+                  <button class="music-title active">
+                    <i class="fas fa-music"></i>
+                    <span>인기곡</span>
+                  </button>
+                </div>
+                <div class="col-md-4 col-sm-3 col-xs-4">
+                  <button class="music-title">
+                    <i class="fas fa-music"></i>
+                    <span>최신곡</span>
+                  </button>
+                </div>
+                <div class="col-md-4 col-sm-3 col-xs-4">
+                  <button class="music-title">
+                    <i class="fas fa-music"></i>
+                    <span>추천곡</span>
+                  </button>
+                </div>
+              </div>
+              <div class="tab-wrap">
+                <ul class="tab">
+                  @@for (var i = 0; i < 4; i++) {
+                    @@include('component/musicIDisplaytemWidth/musicIDisplaytemWidth.html')
+                  }
+                </ul>
+              </div>
             </div>
           </div>
         </div> 
 
         <!-- Marketing Icons Section -->
-        <div class="row">
-          @@for (var i = 0; i < 6; i++) {
-            @@include('component/musicIDisplaytem/musicIDisplaytem.html')
-          }
-        </div>
-        <!-- /.row -->
-    
-        <!-- Portfolio Section -->
-        <h2>Portfolio Heading</h2>
-    
-        <div class="row">
-          @@for (var i = 0; i < 6; i++) {
-            @@include('component/musicalNoteItem/musicalNoteItem.html')
-          }
-        </div>
-        <!-- /.row -->
-    
-        <!-- Features Section -->
-        <div class="row">
-          <div class="col-lg-6">
-            <h2>Modern Business Features</h2>
-            <p>The Modern Business template by Start Bootstrap includes:</p>
-            <ul>
-              <li>
-                <strong>Bootstrap v4</strong>
-              </li>
-              <li>jQuery</li>
-              <li>Font Awesome</li>
-              <li>Working contact form with validation</li>
-              <li>Unstyled page elements for easy customization</li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
-          </div>
-          <div class="col-lg-6">
-            <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
+        <div class="music-display custom-breakpoint">
+          <h3 class="music-title">
+            <i class="fas fa-music"></i>
+            <span>최신곡</span>
+          </h3>
+          <a href="#" class="btn btn-link">더보기</a>
+          <div class="row">
+            @@for (var i = 0; i < 5; i++) {
+              @@include('component/musicIDisplaytem/musicIDisplaytem.html')
+            }
           </div>
         </div>
-        <!-- /.row -->
-    
-        <hr>
-    
-        <!-- Call to Action Section -->
-        <div class="row mb-4">
-          <div class="col-md-8">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-          </div>
-          <div class="col-md-4">
-            <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
+
+        <!-- Marketing Icons Section -->
+        <div class="music-display custom-breakpoint">
+          <h3 class="music-title">
+            <i class="fas fa-music"></i>
+            <span>추천곡</span>
+          </h3>
+          <a href="#" class="btn btn-link">더보기</a>
+          <div class="row">
+            @@for (var i = 0; i < 5; i++) {
+              @@include('component/musicIDisplaytem/musicIDisplaytem.html')
+            }
           </div>
         </div>
+
+        <!-- Marketing Icons Section -->
+        <div class="music-display custom-breakpoint">
+          <h3 class="music-title">
+            <i class="fas fa-book-open"></i>
+            <span>상팔스타일 기타여행 악보집</span>
+          </h3>
+          <a href="#" class="btn btn-link">더보기</a>
+          <div class="row">
+            @@for (var i = 0; i < 5; i++) {
+              @@include('component/musicalNoteItem/musicalNoteItem.html')
+            }
+          </div>
+        </div>
+
+
     
       </div>
     </div>
       <!-- /.container -->
     
       <!-- Footer -->
-      <footer class="py-5 bg-dark">
+      <footer class="mt-5 pb-5 bg-white border-top">
         <div class="container">
-          <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+          <address class="m-0 pt-4 pb-1 text-center">제주특별자치도 제주시 한경면 중산간서로 3633-7 와이엘아트 대표이사 전상헌 사업자등록번호 123-45-6789</address>
+          <strong class="text-center">상팔스타일 기타 여행</strong>
         </div>
         <!-- /.container -->
       </footer>
