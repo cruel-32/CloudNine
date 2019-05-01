@@ -1,0 +1,12 @@
+<div class="music-display custom-breakpoint">
+    <h3 class="music-title">
+      <i class="fas fa-book-open"></i>
+      <span>@@title</span>
+    </h3>
+    <a href="#" class="btn btn-link">더보기</a>
+    <div class="row">
+      @@for (var i = 0; i < 5; i++) {
+        @@include('component/musicNote/musicNoteItem.html')
+      }
+    </div>
+</div>

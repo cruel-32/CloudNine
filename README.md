@@ -57,8 +57,6 @@ npm i aos
 - source폴더 html파일중 **include로 된 파일**을 component화 하시고 iterate 해주시면 됩니다
 ```html
 <div ng>
-    @@include('component/musicIDisplaytem/musicIDisplaytem.html')
-    @@include('component/musicIDisplaytem/musicIDisplaytem.html')
-    @@include('component/musicIDisplaytem/musicIDisplaytem.html')
+    @@include('component/musicDisplay/musicDisplayItem.html')
 </div>
 ```

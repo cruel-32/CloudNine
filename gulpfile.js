@@ -4,10 +4,12 @@ const gutil = require('gulp-util'),
     newer = require('gulp-newer'),
     fileinclude = require('gulp-file-include'),
     htmlhint = require("gulp-htmlhint"),
+    prettyHtml = require('gulp-pretty-html'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     csscomb = require('gulp-csscomb'),
     cssmin = require('gulp-cssmin'),
+    cssbeautify = require('gulp-cssbeautify'),
     gcmq = require('gulp-group-css-media-queries'),
     jshint = require('gulp-jshint'),
     babel = require('gulp-babel'),
@@ -36,6 +38,7 @@ const html = ()=> src([`${origin}/**/*.html`], {since: lastRun(html)})
     }))
     .pipe(htmlhint('hint/.htmlhintrc'))
     .pipe(template())
+    .pipe(prettyHtml())
     .pipe(dest(`${project}`))
     .pipe(browsersync.stream());
 
@@ -62,7 +65,8 @@ const css = () => src([`${origin}/css/**/*.{css,scss,sass}`, `!${origin}/css/imp
     .pipe(csscomb({
         configPath: 'hint/.csscomb.json'
     }))
-    .pipe(cssmin())
+    // .pipe(cssmin())
+    .pipe(cssbeautify())
     .pipe(dest(`${project}/css`))
     .pipe(browsersync.stream());;
 
@@ -87,7 +91,7 @@ const imagesOptimization = () => src([
 
 const browserSyncInit = (done)=>{
     browsersync.init({
-        index:'index.html',
+        index:'/page/index.html',
         server: {
             baseDir: `${project}/`,
         },

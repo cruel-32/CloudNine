@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>상팔기타</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name='author' content="상팔">
+<meta name='description' content="상팔기타 사이트에 오신 것을 환영합니다">
+@@include('head.html')
+</head>
+<body>
+<div class="wrap">
+  @@include('component/header/header.html')
+    <!-- Page Content -->
+    <div class="container-fluid p-0">
+      <div class="container">
+        @@include('component/mainDisplay/mainDisplay.html', {
+            "title" : "상팔의 추천곡 (Sangpal’s Choice)"
+        })
+        @@include('component/musicDisplay/musicDisplay.html', { "title": "최신곡" })
+        @@include('component/musicDisplay/musicDisplay.html', { "title": "추천곡" })
+        @@include('component/musicNote/musicNote.html', { "title": "상팔스타일 기타여행 악보집" })
+      </div>
+    </div>
+      <!-- /.container -->
+      <!-- Footer -->
+      @@include('footer.html')
+      @@include('component/modal.html')
+      @@include('component/search-modal.html')
+    <script src="/js/common.js"></script>
+</div>
+</body>
+</html>
