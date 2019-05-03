@@ -30,16 +30,17 @@
         }
     }
     .fa-search {
-        color:#a9bafa;
+        color:$purple;
         font-size:2rem;
     }
 
-    .fa-user {
-        vertical-align: bottom;
-    }
+    // .fa-user {
+    //     vertical-align: bottom;
+    // }
 
     .m-search {
-        color:$red;
+        color:$purple;
+        font-size:2rem;
     }
 }
 

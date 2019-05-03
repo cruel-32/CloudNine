@@ -87,8 +87,11 @@ nav {
       }
     }
     .fa-user {
-      color:#fbc1d5;
+      color:$pink;
       font-size:2rem;
+      &.login {
+        color:$green;
+      }
     }
     .menu-button {
       position:absolute;
@@ -117,4 +120,12 @@ nav {
 .tag-list {
   overflow-x:auto;
   white-space:nowrap;
+}
+
+.login-modal-dialog {
+  .modal-body {
+    .card {
+      border: none;
+    }
+  }
 }
