@@ -1,0 +1,30 @@
+@import '../import/variable.scss';
+@import '../../../node_modules/bootstrap/scss/mixins/breakpoints';
+
+.counter-section {
+    .row {
+      margin:0;
+    }
+    .col-4 {
+      padding:0;
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%;
+    }
+    .fas {
+      font-size:0.75rem;
+    }
+    .fa-play {
+      color:#febd86;
+    }
+    .fa-heart {
+      color:#d49be3;
+    }
+    .fa-comment {
+      color:#cbe9a2;
+    }
+    .count {
+      font-size:12px;
+      font-family: 'Nanum Gothic';
+      letter-spacing:-0.05rem;
+    }
+}

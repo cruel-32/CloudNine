@@ -1,0 +1,72 @@
+@import '../import/variable.scss';
+@import '../../../node_modules/bootstrap/scss/mixins/breakpoints';
+
+.music-tab {
+    height:100%;
+    .col-md-4 {
+      padding:0;
+    }
+    .col-xs-4 {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+    .music-title {
+      opacity: 0.5;
+      &.active, &:hover {
+        opacity: 1;
+      }
+    }
+    .tab-wrap {
+      height:calc(100% -  7.5rem);
+      .tab {
+        height:100%;
+        list-style: none;
+        padding:0;
+        margin:0;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+}
+
+
+
+.music-list {
+    @include media-breakpoint-down(md) {
+      margin-bottom:1rem;
+    }
+    .row {
+      height:100%;
+    }
+    .col-5 {
+      padding:0;
+    }
+    .col-7 {
+      padding:0;
+    }
+    .col-7 {
+      .text-section {
+        padding:0.5rem 0.7rem 0.5rem 0.7rem;
+        > strong {
+          display:block;
+          padding: 0 0 0.5rem 0;
+          font-weight: normal;
+          
+          @include media-breakpoint-only(lg) {
+            white-space: nowrap; 
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+  
+          .title {
+            color:$text;
+            text-decoration: none;
+            @include media-breakpoint-down(md) {
+              font-size:1.2rem;
+            }
+          }
+        }
+      }
+    }
+}

@@ -1,0 +1,44 @@
+@import '../import/variable.scss';
+
+.detail-count-section {
+    position: absolute;
+    top:1.5rem;
+    right:0.5rem;
+    .fas {
+        padding-left:0.5rem;
+        font-size:0.75rem;
+    }
+    .fa-play {
+        color:#febd86;
+    }
+    .fa-heart {
+        color:#d49be3;
+    }
+    .fa-comment {
+        color:#cbe9a2;
+    }
+    .text {
+        font-size:1rem;
+        color:$text;
+        padding-left:0.5rem;
+    }
+    .count {
+        font-size:1rem;
+        padding-left:0.5rem;
+        color:$text;
+    }
+}
+
+
+.main-display-tooltip {
+    .detail-count-section {
+        position: static;
+        display:block;
+        .text {
+        color:$gray;
+        }
+        .count {
+        color:$gray;
+        }
+    }
+}

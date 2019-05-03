@@ -1,0 +1,18 @@
+@import '../import/variable.scss';
+@import '../../../node_modules/bootstrap/scss/mixins/breakpoints';
+
+.tag-list {
+    overflow-x:auto;
+    white-space:nowrap;
+    .tag-item {
+      color:$text;
+      margin-right:0.5rem;
+      text-decoration: none;
+      &:hover {
+        color:$text-hover;
+      }
+      @include media-breakpoint-down(md) {
+        font-size:1.2rem;
+      }
+    }
+}

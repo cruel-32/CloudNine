@@ -1,0 +1,57 @@
+@import '../import/variable.scss';
+@import '../../../node_modules/bootstrap/scss/mixins/breakpoints';
+
+.music-display {
+    position: relative;
+    .btn-link {
+      position: absolute;
+      top:1.0rem;
+      right:0.5rem;
+    }
+    .music-display-item {
+      margin-bottom:1.5rem;
+      .text-section {
+        > strong {
+          display:block;
+          padding: 1rem 0 0.5rem 0;
+          font-weight: normal;
+          .title {
+            color:$text;
+            text-decoration: none;
+            @include media-breakpoint-down(md) {
+              font-size:1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+.main-display-tooltip {
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0, 0, 0, 0.8);
+    padding:1rem 1rem 1rem 1rem;
+    .title {
+      color:$primary;
+      font-size:1.8rem;
+    }
+    .sub-title {
+      position: absolute;
+      top:1.2rem;
+      right:0.5rem;
+      @include media-breakpoint-down(md) {
+        position:static;
+        margin:0.5rem 0 0.5rem 0;
+      }
+      > span {
+        font-size: 1.2rem;
+        color:$gray;
+      }
+    }
+}

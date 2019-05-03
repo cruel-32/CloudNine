@@ -1,0 +1,17 @@
+<div class="music-tab">
+    <div class="row tab-btn-section">
+        @@loop('component/musicTab/musicTabMenu.html', [
+            {"title": "인기곡", "active" : "active"},
+            {"title": "최신곡", "active" : ""},
+            {"title": "추천곡", "active" : ""}
+        ])
+    </div>
+    <div class="tab-wrap">
+        <ul class="tab">
+            @@for (var i = 0; i < 4; i++) {
+                @@include('component/musicTab/musicTabItem.html')
+            }
+        </ul>
+    </div>
+</div>
+<link href="/css/component/musicTab.css" rel="stylesheet">
