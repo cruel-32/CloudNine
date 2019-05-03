@@ -27,8 +27,8 @@ const clean = async (done) => {
     done();
 }
 
-const html = ()=> src([`${origin}/**/*.html`], {since: lastRun(html)})
-    .pipe(newer(`${project}`))
+const html = ()=> src([`${origin}/**/*.html`])//, {since: lastRun(html)}
+    // .pipe(newer(`${project}`))
     .pipe(fileinclude({
         prefix: '@@',
         basepath: `${origin}/include`,
