@@ -1,0 +1,36 @@
+동영상 배경 썸네일(480x360) : 0.jpg
+https://img.youtube.com/vi/rPWRjUgWaMY/0.jpg
+
+
+동영상 시작지점 썸네일(120x90) : 1.jpg
+https://img.youtube.com/vi/rPWRjUgWaMY/1.jpg
+
+
+동영상 중간지점 썸네일(120x90) : 2.jpg
+https://img.youtube.com/vi/rPWRjUgWaMY/2.jpg
+
+
+동영상 끝지점 썸네일(120x90) : 3.jpg
+https://img.youtube.com/vi/rPWRjUgWaMY/3.jpg
+
+고해상도 썸네일(1280x720, 1920x1080) : maxresdefault.jpg
+https://img.youtube.com/vi/rPWRjUgWaMY/maxresdefault.jpg
+
+중간해상도 썸네일(640x480) : sddefault.jpg
+https://img.youtube.com/vi/rPWRjUgWaMY/sddefault.jpg
+
+고품질 썸네일(480x360) : hqdefault.jpg
+https://img.youtube.com/vi/rPWRjUgWaMY/hqdefault.jpg
+
+중간품질 썸네일(320x180) : mqdefault.jpg
+https://img.youtube.com/vi/rPWRjUgWaMY/mqdefault.jpg
+
+보통품질 썸네일(120x90) : default.jpg
+https://img.youtube.com/vi/rPWRjUgWaMY/default.jpg
+
+표준형 썸네일(640x480) : sddefault.jpg
+https://img.youtube.com/vi/rPWRjUgWaMY/sddefault.jpg
+
+
+최대 해상도 썸네일(1920x1080) : maxresdefault.jpg
+https://img.youtube.com/vi/rPWRjUgWaMY/maxresdefault.jpg
