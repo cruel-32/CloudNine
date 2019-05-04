@@ -5,7 +5,18 @@
     </h3>
     <div class="media-section position-relative">
         <a href="#">
-            <img src="/images/thum-large.png" />
+            <img
+                srcset="
+                    https://img.youtube.com/vi/rPWRjUgWaMY/hqdefault.jpg 576w,
+                    https://img.youtube.com/vi/rPWRjUgWaMY/sddefault.jpg 768w,
+                    https://img.youtube.com/vi/rPWRjUgWaMY/maxresdefault.jpg 1000w"
+                sizes="
+                    (max-width: 576px) 576px,
+                    (max-width: 768px) 768px,
+                    1000px"
+                src="https://img.youtube.com/vi/rPWRjUgWaMY/maxresdefault.jpg" alt="">
+
+
             <div class="main-display-tooltip" role="tooltip">
                 <div class="title-section">
                     <h1 class="title">@@songTitle</h1>

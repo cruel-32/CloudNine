@@ -10,6 +10,15 @@
     }
     .music-display-item {
       margin-bottom:1.5rem;
+      .thum-section {
+        .thum-item-img {
+          display:block;
+          overflow: hidden;
+          img {
+            margin: -10.2% 0 -10.1% 0;
+          }
+        }
+      }
       .text-section {
         > strong {
           display:block;

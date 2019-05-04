@@ -32,7 +32,7 @@
 
 
 
-.music-list {
+.music-tab-items {
     @include media-breakpoint-down(md) {
       margin-bottom:1rem;
     }
@@ -41,6 +41,13 @@
     }
     .col-5 {
       padding:0;
+      .tab-item-img {
+        overflow: hidden;
+        display:block;
+        img {
+          margin: -10.2% 0 -10.1% 0;
+        }
+      }
     }
     .col-7 {
       padding:0;
