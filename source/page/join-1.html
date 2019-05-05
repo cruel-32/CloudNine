@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>이용약관 | 회원가입 | 상팔기타</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name='author' content="상팔">
+<meta name='description' content="상팔기타 사이트에 오신 것을 환영합니다">
+@@include('head.html')
+</head>
+<body>
+<div class="wrap">
+  @@include('layout/header.html')
+    <!-- Page Content -->
+    <div class="container">
+      <div class="music-display custom-breakpoint">
+          <h3 class="music-title">
+            <i class="fas fa-music"></i>
+            <span>회원가입</span>
+          </h3>
+      </div>
+
+      <div class="join-section">
+        @@include('component/stepper.html', {
+          "active1" : "active",
+          "active2" : "",
+          "active3" : ""
+        })
+        <form>
+          <div class="form-group mt-5">
+            <label for="text-area-1">이용약관</label>
+            <textarea class="form-control" id="text-area-1" rows="6" ></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check-box-1">
+            <label class="form-check-label" for="check-box-1">회원가입 약관의 내용에 동의 합니다.</label>
+          </div>
+          <div class="form-group mt-5">
+            <label for="text-area-2">개인정보 취급방침 안내</label>
+            <textarea class="form-control" id="text-area-2" rows="6" ></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check-box-2">
+            <label class="form-check-label" for="check-box-2">개인정보 취급 방침 안내에 동의 합니다.</label>
+          </div>
+
+          <div class="text-center mt-5">
+            <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+      <!-- /.container -->
+      <!-- Footer -->
+      @@include('layout/footer.html')
+      @@include('component/login_modal.html')
+      @@include('component/search_modal.html')
+      @@include('component/spinner.html')
+    <script src="/js/common.js"></script>
+</div>
+</body>
+</html>

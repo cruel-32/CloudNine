@@ -1,0 +1,77 @@
+@import '../import/variable.scss';
+@import '../../../node_modules/bootstrap/scss/mixins/breakpoints';
+
+.stepper-section {
+    display:flex;
+    border:1px solid #ccc;
+    border-radius: 15px;
+    padding:0;
+    overflow: hidden;
+    // background:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+    > li {
+        list-style-type: none;
+        padding:0;
+        > a {
+            padding:1rem 1rem 1rem 4rem;
+            text-decoration: none;
+            @include media-breakpoint-down(md) {
+                padding:0.4rem 0.4rem 0.4rem 2rem;
+            }
+            
+            font-size:1.2rem;
+            position: relative;
+            display:block;
+            color:$text;
+            background: #ededed;
+            &:before {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-top: 50px solid transparent;
+                border-bottom: 50px solid transparent;
+                border-left: 30px solid #ccc;
+                @include media-breakpoint-down(md) {
+                    border-left: 15px solid #ccc;
+                }
+                position: absolute;
+                top: 50%;
+                margin-top: -50px;
+                margin-left: 1px;
+                left: 100%;
+                z-index: 1;
+            }
+            &:after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-top: 50px solid transparent;
+                border-bottom: 50px solid transparent;
+                border-left: 30px solid #ededed;
+                @include media-breakpoint-down(md) {
+                    border-left: 15px solid #ededed;
+                }
+                position: absolute;
+                top: 50%;
+                margin-top: -50px;
+                left: 100%;
+                z-index: 2;
+            }
+        }
+
+        &.active {
+            > a {
+                color:$primary;
+                background: #fff;
+                &:after {
+                    border-left: 30px solid #fff;
+                    @include media-breakpoint-down(md) {
+                        border-left: 15px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+

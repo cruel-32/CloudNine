@@ -161,3 +161,17 @@ footer {
     justify-content: center;
   }
 }
+
+
+.check-flex {
+  display:flex;
+  justify-content: space-between;
+  .col-9 {
+      flex: 0 0 75%;
+      max-width: 75%;
+  }
+}
+
+.required {
+  color:$primary;
+}

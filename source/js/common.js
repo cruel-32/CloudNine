@@ -9,31 +9,48 @@ const responsive = {
 const getDevice = width=> Object.keys(responsive).find(size => width < responsive[size]);
 
 
-//스크립트가 없이 css만으로 모든 것을 responsive하게 코딩하는게 불가능합니다.
-//메인에 큰 이미지영역의 높이만큼 탭영역 높이도 맞춰주어야 합니다. (resize 시에도)
-//일단 jquery로 짜두긴 했는데 추후에 angular 코드로 바꿔주셔도 됩니다.
-
+//responsive js코드 
 $(window).resize((e)=>{
     const device = getDevice($(window).width());
 
     switch(device){
         case 'xl' :
+            //가장 큰화면
         break;
+
         case 'lg' :
+            //큰 화면
         break;
+
         case 'md' :
+            //테블릿화면
         break;
+        
         case 'sm' :
+            //큰 모바일 화면
         break;
+
         case 'xs' :
+            //모바일 화면
         break;
+
+        default :
+            //기본화면
     }
 });
 
 $(function () {
-    AOS.init();
     $('[data-toggle="tooltip"]').tooltip({
         boundary: 'window'
     })
 })
 
+
+
+/* spinner 호출 - 확인 후 삭제하세요 */ 
+const $spinner = $("#spinner");
+$spinner.show(); //로딩바 호출
+
+setTimeout(()=>{
+    $spinner.hide(); //로디방 숨기기
+},1000);

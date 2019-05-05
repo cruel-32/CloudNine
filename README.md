@@ -13,7 +13,7 @@
 - build 폴더를 보고 작업하시면 됩니다.
 
 ## gulp
-+ 전체 html파일을 확인하시려면 gulp로 로컬서버를 가동하여 확인하시거나 build 폴더안에 파일을 확인하세요.
++ 전체 html파일을 확인하시거나 커스텀하시려면 gulp로 로컬서버를 가동하여 확인하시거나 build 폴더안에 파일을 확인하세요.
 
 `1.` gulp 설치 (터미널에서 해당 루트 디렉토리에서 명령어 입력)
 ```js
@@ -38,9 +38,6 @@ gulp
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>  
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<!-- aos -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 <!-- fontawsome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 ```
@@ -49,12 +46,11 @@ gulp
 ```js
 npm i bootstrap
 npm i jquery
-npm i aos
 ```
 
 - source폴더 html파일중 **include로 된 파일**을 component화 하시고 iterate 해주시면 됩니다
 ```html
 <div ng>
-    @@include('component/musicDisplay/musicDisplayItem.html')
+    @@include('component/login_modal.html')
 </div>
 ```

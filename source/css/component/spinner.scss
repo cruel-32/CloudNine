@@ -1,0 +1,16 @@
+@import '../import/variable.scss';
+@import '../../../node_modules/bootstrap/scss/mixins/breakpoints';
+
+
+#spinner {
+    display:none;
+    background: rgba($color: #000000, $alpha: 0.5);
+    .d-flex {
+        height:100%;
+        align-items:center;
+    }
+    .custom-spinner {
+        width: 5rem;
+        height: 5rem;
+    }
+}

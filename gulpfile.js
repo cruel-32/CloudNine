@@ -8,7 +8,7 @@ const gutil = require('gulp-util'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     csscomb = require('gulp-csscomb'),
-    cssmin = require('gulp-cssmin'),
+    // cssmin = require('gulp-cssmin'),
     cssbeautify = require('gulp-cssbeautify'),
     gcmq = require('gulp-group-css-media-queries'),
     jshint = require('gulp-jshint'),
@@ -16,6 +16,7 @@ const gutil = require('gulp-util'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
     template = require('gulp-template'),
+    filemapGenerator = require('gulp-filemap-generator'),
     browsersync = require("browser-sync").create(),
     del = require('del'),
     zip = require('gulp-zip'),
@@ -27,7 +28,7 @@ const clean = async (done) => {
     done();
 }
 
-const html = ()=> src([`${origin}/**/*.html`])//, {since: lastRun(html)}
+const html = ()=> src([`${origin}/**/*.html`, `!${origin}/map.html`])//, {since: lastRun(html)}
     // .pipe(newer(`${project}`))
     .pipe(fileinclude({
         prefix: '@@',
@@ -41,6 +42,24 @@ const html = ()=> src([`${origin}/**/*.html`])//, {since: lastRun(html)}
     .pipe(prettyHtml())
     .pipe(dest(`${project}`))
     .pipe(browsersync.stream());
+
+
+const generateFilemap = () => src([`${project}/page/**/*.html`], {since: lastRun(html)})
+    .pipe(filemapGenerator({
+        'template':`map.html`,
+        'templatePath':`${origin}`,
+        'title':'-',
+        'author':'cruel32',
+        'description':'설명이 없어요',
+        'stream' : false,
+        'baseDir' : `${project}`,
+        'listName' : 'maps',
+        'hrefBaseDir' : ``,
+        'toJson' : false,
+        "jsonName" : "maps",
+        "jsonDest" : `${project}`
+    }))
+    .pipe(dest(`${project}`))
 
 
 const scripts = ()=> src([`${origin}/js/**/*.js`], {since: lastRun(scripts)})
@@ -91,7 +110,7 @@ const imagesOptimization = () => src([
 
 const browserSyncInit = (done)=>{
     browsersync.init({
-        index:'/page/index.html',
+        index:'/map.html',
         server: {
             baseDir: `${project}/`,
         },
@@ -117,7 +136,7 @@ const watcher = () => {
     watch([`${origin}/images/**/*.{gif,jpeg,jpg,png,svg}`], images).on('change', browsersync.reload);
 }
 
-exports.default = series(clean, parallel(font, html, css, scripts, images), parallel(browserSyncInit, watcher) );
+exports.default = series(clean, parallel(font, html, css, scripts, images), generateFilemap, parallel(browserSyncInit, watcher) );
 exports.clean = clean;
 exports.optimize = imagesOptimization;
 exports.pack = series(clean, parallel(font,html, css, scripts, images), packing);
