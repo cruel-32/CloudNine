@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>아이디/비밀번호 찾기 | 상팔기타</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name='author' content="상팔">
+<meta name='description' content="상팔기타 사이트에 오신 것을 환영합니다">
+@@include('head.html')
+</head>
+<body>
+<div class="wrap">
+  @@include('layout/header.html')
+    <!-- Page Content -->
+    <div class="container">
+      <div class="music-display custom-breakpoint">
+          <h3 class="music-title">
+            <i class="fas fa-music"></i>
+            <span>아이디 찾기</span>
+          </h3>
+      </div>
+
+      <div class="join-section">
+        <form>
+            <div class="form-group">
+              <small class="form-text text-muted">등록하신 이메일로 아이디를 발송 합니다.</small>
+              <div class="check-flex">
+                <input type="email" class="form-control col-9" id="input-id" placeholder="이메일">
+                <input type="button" class="form-control btn-primary col-3 ml-1" id="input-check" value="아이디발송">
+              </div>
+            </div>
+          </form>
+      </div>
+
+      <div class="music-display custom-breakpoint">
+          <h3 class="music-title">
+            <i class="fas fa-music"></i>
+            <span>비밀번호 초기화</span>
+          </h3>
+      </div>
+
+      <div class="join-section">
+        <small class="form-text text-muted mb-2">등록하신 이메일로 임시 비밀번호를 발송 합니다.</small>
+        <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="input-id-2" placeholder="아이디">
+            </div>
+            <div class="form-group">
+              <div class="check-flex">
+                <input type="email" class="form-control col-9" id="input-id" placeholder="이메일">
+                <input type="button" class="form-control btn-primary col-3 ml-1" id="input-check" value="초기화">
+              </div>
+            </div>
+          </form>
+      </div>
+
+    </div>
+      <!-- /.container -->
+      <!-- Footer -->
+      @@include('layout/footer.html')
+      @@include('component/login_modal.html')
+      @@include('component/search_modal.html')
+      @@include('component/spinner.html')
+    <script src="<%=path.js%>common.js"></script>
+
+</div>
+</body>
+</html>
