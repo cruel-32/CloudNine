@@ -30,6 +30,11 @@ npm i //관련 모듈 설치
 gulp
 ```
 
+`4.` 로컬서버 없이 브라우저에서 바로 띄우고 싶을 경우
+```js
+gulp local //local 폴더에 생성
+```
+
 ## html => angular
 
 - 공통소스 import
