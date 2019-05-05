@@ -1,0 +1,20 @@
+.tag-list {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.tag-list .tag-item {
+    color: #666;
+    margin-right: .5rem;
+    text-decoration: none;
+}
+
+.tag-list .tag-item:hover {
+    color: #000;
+}
+
+@media (max-width: 999.98px) {
+    .tag-list .tag-item {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,89 @@
+.detail-content .title-section:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.detail-content .title-section > h4 {
+    float: left;
+}
+
+.detail-content .title-section > h4 .fas {
+    color: #cbe9a2;
+    font-size: 1.5rem;
+}
+
+.detail-content .title-section .sns-section {
+    float: left;
+}
+
+.detail-content .user-img {
+    color: #fbc1d5;
+    width: 2rem;
+}
+
+.detail-content .user-img > .fas {
+    font-size: 2rem;
+}
+
+.media {
+    border-top: 1px solid #ededed;
+}
+
+.media:first-child {
+    border-top: none;
+}
+
+.media .fa-reply {
+    -webkit-transform: rotate(-90deg) rotateY(180deg);
+    transform: rotate(-90deg) rotateY(180deg);
+}
+
+.media .media-body > p {
+    margin-bottom: 0;
+}
+
+.media .media-body .title {
+    margin-bottom: .5rem;
+}
+
+.media .media-body .title .writer {
+    display: inline-block;
+    color: #333;
+}
+
+.media .media-body .title .media-counter-section {
+    display: inline-block;
+}
+
+.media .media-body .title .media-counter-section .fas {
+    font-size: .75rem;
+}
+
+.media .media-body .title .media-counter-section .fa-play {
+    color: #febd86;
+}
+
+.media .media-body .title .media-counter-section .fa-heart {
+    color: #d49be3;
+}
+
+.media .media-body .title .media-counter-section .fa-comment {
+    color: #cbe9a2;
+}
+
+.media .media-body .title .media-counter-section .count {
+    font-size: 12px;
+    font-family: 'Nanum Gothic';
+    letter-spacing: -.05rem;
+    padding-right: .2rem;
+}
+
+.media .media-body .title .media-counter-section .reply {
+    color: #666;
+    font-size: .8rem;
+}
+
+.media .media-body .title .media-counter-section .reply i {
+    color: #e55;
+}

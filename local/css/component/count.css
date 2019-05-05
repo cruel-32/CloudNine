@@ -1,0 +1,31 @@
+.counter-section .row {
+    margin: 0;
+}
+
+.counter-section .col-4 {
+    padding: 0;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+
+.counter-section .fas {
+    font-size: .75rem;
+}
+
+.counter-section .fa-play {
+    color: #febd86;
+}
+
+.counter-section .fa-heart {
+    color: #d49be3;
+}
+
+.counter-section .fa-comment {
+    color: #cbe9a2;
+}
+
+.counter-section .count {
+    font-size: 12px;
+    font-family: 'Nanum Gothic';
+    letter-spacing: -.05rem;
+}

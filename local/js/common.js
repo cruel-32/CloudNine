@@ -1,0 +1,1 @@
+"use strict";var responsive={xs:576,sm:768,md:1e3,lg:1280,xl:3e3},getDevice=function(n){return Object.keys(responsive).find(function(e){return n<responsive[e]})};$(window).resize(function(e){getDevice($(window).width())}),$(function(){$('[data-toggle="tooltip"]').tooltip({boundary:"window"})});var $spinner=$("#spinner");$spinner.show(),setTimeout(function(){$spinner.hide()},1e3);

@@ -1,0 +1,80 @@
+.stepper-section {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.stepper-section > li {
+    list-style-type: none;
+    padding: 0;
+}
+
+.stepper-section > li > a {
+    padding: 1rem 1rem 1rem 4rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    display: block;
+    color: #666;
+    background: #ededed;
+}
+
+.stepper-section > li > a:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #ccc;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: 1px;
+    left: 100%;
+    z-index: 1;
+}
+
+.stepper-section > li > a:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #ededed;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 100%;
+    z-index: 2;
+}
+
+.stepper-section > li.active > a {
+    color: #e55;
+    background: #fff;
+}
+
+.stepper-section > li.active > a:after {
+    border-left: 30px solid #fff;
+}
+
+@media (max-width: 999.98px) {
+    .stepper-section > li > a {
+        padding: .4rem .4rem .4rem 2rem;
+    }
+
+    .stepper-section > li > a:before {
+        border-left: 15px solid #ccc;
+    }
+
+    .stepper-section > li > a:after {
+        border-left: 15px solid #ededed;
+    }
+
+    .stepper-section > li.active > a:after {
+        border-left: 15px solid #fff;
+    }
+}

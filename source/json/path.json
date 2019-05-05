@@ -1,0 +1,7 @@
+{
+    "path" : {
+        "js" : "/js/",
+        "css" : "/css/",
+        "images" : "/images/"
+    }
+}

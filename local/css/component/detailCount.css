@@ -1,0 +1,47 @@
+.detail-count-section {
+    position: absolute;
+    top: 1.5rem;
+    right: .5rem;
+}
+
+.detail-count-section .fas {
+    padding-left: .5rem;
+    font-size: .75rem;
+}
+
+.detail-count-section .fa-play {
+    color: #febd86;
+}
+
+.detail-count-section .fa-heart {
+    color: #d49be3;
+}
+
+.detail-count-section .fa-comment {
+    color: #cbe9a2;
+}
+
+.detail-count-section .text {
+    font-size: 1rem;
+    color: #666;
+    padding-left: .5rem;
+}
+
+.detail-count-section .count {
+    font-size: 1rem;
+    padding-left: .5rem;
+    color: #666;
+}
+
+.main-display-tooltip .detail-count-section {
+    position: static;
+    display: block;
+}
+
+.main-display-tooltip .detail-count-section .text {
+    color: #ededed;
+}
+
+.main-display-tooltip .detail-count-section .count {
+    color: #ededed;
+}

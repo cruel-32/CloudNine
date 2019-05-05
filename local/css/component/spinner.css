@@ -1,0 +1,14 @@
+#spinner {
+    display: none;
+    background: rgba(0, 0, 0, .5);
+}
+
+#spinner .d-flex {
+    height: 100%;
+    align-items: center;
+}
+
+#spinner .custom-spinner {
+    width: 5rem;
+    height: 5rem;
+}

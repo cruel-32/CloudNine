@@ -1,0 +1,69 @@
+.music-display {
+    position: relative;
+}
+
+.music-display .btn-link {
+    position: absolute;
+    top: 1.0rem;
+    right: .5rem;
+}
+
+.music-display .music-display-item {
+    margin-bottom: 1.5rem;
+}
+
+.music-display .music-display-item .thum-section .thum-item-img {
+    display: block;
+    overflow: hidden;
+}
+
+.music-display .music-display-item .thum-section .thum-item-img img {
+    margin: -10.2% 0 -10.1% 0;
+}
+
+.music-display .music-display-item .text-section > strong {
+    display: block;
+    padding: 1rem 0 .5rem 0;
+    font-weight: normal;
+}
+
+.music-display .music-display-item .text-section > strong .title {
+    color: #666;
+    text-decoration: none;
+}
+
+.main-display-tooltip {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .8);
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.main-display-tooltip .title {
+    color: #e55;
+    font-size: 1.8rem;
+}
+
+.main-display-tooltip .sub-title {
+    position: absolute;
+    top: 1.2rem;
+    right: .5rem;
+}
+
+.main-display-tooltip .sub-title > span {
+    font-size: 1.2rem;
+    color: #ededed;
+}
+
+@media (max-width: 999.98px) {
+    .music-display .music-display-item .text-section > strong .title {
+        font-size: 1.2rem;
+    }
+
+    .main-display-tooltip .sub-title {
+        position: static;
+        margin: .5rem 0 .5rem 0;
+    }
+}

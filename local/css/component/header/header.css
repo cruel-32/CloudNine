@@ -1,0 +1,153 @@
+nav {
+    padding: 0;
+    background: #fff;
+}
+
+.navigation .row {
+    position: relative;
+    margin: 0;
+}
+
+.navigation .row .col-4 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navigation .row .logo-section .logo {
+    display: inline-block;
+    height: 100%;
+    background: url(/images/character.png) center 1.25rem no-repeat;
+    background-size: cover;
+    height: 0;
+    width: 11.7rem;
+    padding-top: 7.5rem;
+    overflow: hidden;
+}
+
+.navigation .row .title {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.navigation .row .title .text strong {
+    color: #e55;
+}
+
+.navigation .row .fa-user {
+    color: #fbc1d5;
+    font-size: 2rem;
+}
+
+.navigation .row .fa-user.login {
+    color: #3df046;
+}
+
+.navigation .row .menu-button {
+    position: absolute;
+    right: 0rem;
+    bottom: -.4rem;
+    font-size: 2.5rem;
+}
+
+.login-modal-dialog .modal-body .card {
+    border: none;
+}
+
+.user-form {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    outline: none;
+}
+
+.user-form > label {
+    margin-bottom: 0;
+}
+
+.user-form .search_form {
+    display: flex;
+}
+
+.user-form .form-control {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #ced4da;
+    outline: none;
+    width: 180px;
+}
+
+.user-form .fa-search {
+    color: #a9bafa;
+    font-size: 2rem;
+}
+
+.user-form .m-search {
+    color: #a9bafa;
+    font-size: 2rem;
+}
+
+.search-modal .modal-body .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.search-modal .modal-body .row .col-10 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.search-modal .modal-body .row .col-2 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (min-width: 768px) {
+    .navigation .row {
+        height: 7.5rem;
+    }
+}
+
+@media (max-width: 999.98px) {
+    .user-form .form-control {
+        width: 120px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navigation .row .logo-section {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .navigation .row .logo-section .logo {
+        width: 5.8rem;
+        padding-top: 3.7rem;
+        background: url(/images/character.png) center .6rem no-repeat;
+        background-size: cover;
+    }
+
+    .navigation .row .title-section {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .navigation .row .user-section {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .navigation .row .title {
+        font-size: 1.5rem;
+    }
+
+    .user-form .search_form {
+        display: none;
+    }
+}
