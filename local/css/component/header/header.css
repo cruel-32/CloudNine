@@ -46,6 +46,16 @@ nav {
     color: #3df046;
 }
 
+.navigation .row .fa-sign-out-alt {
+    color: #f7e924;
+    font-size: 2.3rem;
+}
+
+.navigation .row .fa-users-cog {
+    color: #666;
+    font-size: 2rem;
+}
+
 .navigation .row .menu-button {
     position: absolute;
     right: 0rem;

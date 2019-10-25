@@ -31,6 +31,11 @@
 }
 
 body, table, div, p {font-family:'BMDOHYEON'; letter-spacing: -0.1rem;}
+
+input {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 html, body {
   @include media-breakpoint-down(md) {
     font-size:12px;
